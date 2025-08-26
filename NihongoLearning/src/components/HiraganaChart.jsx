@@ -83,7 +83,7 @@ const HiraganaChart = () => {
       <div className="chart-container">
         <h1>Complete Hiragana Chart</h1>
         <p className="chart-description">
-          All hiragana characters displayed in the traditional 5-column format.
+          All hiragana characters displayed in the traditional 5-column format .
         </p>
 
         <div className="hiragana-grid">
