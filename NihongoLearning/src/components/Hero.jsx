@@ -1,19 +1,27 @@
-import React, { useState, useEffect } from 'react';
-import './Hero.css';
+import React, { useState, useEffect } from "react";
+import "./Hero.css";
 
 const Hero = () => {
   const [currentWord, setCurrentWord] = useState(0);
-  
+
   const japaneseWords = [
     { romaji: "Konnichiwa", japanese: "こんにちは", english: "Hello" },
     { romaji: "Arigatou", japanese: "ありがとう", english: "Thank you" },
-    { romaji: "Hajimemashite", japanese: "はじめまして", english: "Nice to meet you" },
-    { romaji: "Ogenki desu ka", japanese: "お元気ですか", english: "How are you?" }
+    {
+      romaji: "Hajimemashite",
+      japanese: "はじめまして",
+      english: "Nice to meet you",
+    },
+    {
+      romaji: "Ogenki desu ka",
+      japanese: "お元気ですか",
+      english: "How are you?",
+    },
   ];
 
   // Function to open Hiragana chart in new tab
   const openHiraganaChart = () => {
-    window.open('/hiragana', '_blank');
+    window.open("/hiragana", "_blank");
   };
 
   useEffect(() => {
@@ -32,18 +40,20 @@ const Hero = () => {
             <br />
             <span className="highlight">The Beautiful Way</span>
           </h1>
-          
+
           <p className="hero-subtitle">
-            Discover the elegance of Japanese language and culture. 
-            Start your journey to fluency with interactive lessons, 
-            native speakers, and cultural immersion.
+            Discover the elegance of Japanese language and culture. Start your
+            journey to fluency with interactive lessons, native speakers, and
+            cultural immersion.
           </p>
-          
+
           <div className="language-display">
             <div className="japanese-word">
               <div className="kanji">{japaneseWords[currentWord].japanese}</div>
               <div className="romaji">{japaneseWords[currentWord].romaji}</div>
-              <div className="english">{japaneseWords[currentWord].english}</div>
+              <div className="english">
+                {japaneseWords[currentWord].english}
+              </div>
             </div>
           </div>
 
@@ -60,6 +70,10 @@ const Hero = () => {
             <button className="btn btn-hiragana" onClick={openHiraganaChart}>
               <span className="btn-icon">あ</span>
               Hiragana Chart
+            </button>
+            <button className="btn btn-hiragana" onClick={openHiraganaChart}>
+              <span className="btn-icon">あ</span>
+              Katakana Chart
             </button>
           </div>
         </div>
