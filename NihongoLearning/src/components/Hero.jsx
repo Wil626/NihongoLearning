@@ -23,6 +23,12 @@ const Hero = () => {
   const openHiraganaChart = () => {
     window.open("/hiragana", "_blank");
   };
+  const openFlashcardAlarm =() => {
+    window.open("/flashcardAlarm", "_blank");
+  }
+   const openPlacementTest =() => {
+    window.open("/placement-test", "_blank");
+  }
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,7 +68,7 @@ const Hero = () => {
               <span className="btn-icon">🎌</span>
               Start Learning Free
             </button>
-            <button className="btn btn-secondary">
+            <button className="btn btn-secondary" onClick={openPlacementTest}>
               <span className="btn-icon">🎯</span>
               Take Placement Test
             </button>
@@ -71,9 +77,9 @@ const Hero = () => {
               <span className="btn-icon">あ</span>
               Hiragana Chart
             </button>
-            <button className="btn btn-hiragana" onClick={openHiraganaChart}>
+            <button className="btn btn-hiragana" onClick={openFlashcardAlarm}>
               <span className="btn-icon">あ</span>
-              Katakana Chart
+              Flashcard Alarm Clock
             </button>
           </div>
         </div>
@@ -100,7 +106,7 @@ const Hero = () => {
           <span className="stat-label">N5 to N1 Prep</span>
         </div>
         <div className="stat">
-          <span className="stat-number">100%</span>
+          <span className="stat-number">10%0</span>
           <span className="stat-label">Native Teachers</span>
         </div>
       </div>
