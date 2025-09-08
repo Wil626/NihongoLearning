@@ -196,3 +196,222 @@
   min-width: 200px;
   justify-content: center;
 }
+
+/* Add these styles to your existing CSS */
+
+.hiragana-card {
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.hiragana-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hiragana-card.selected {
+  border-color: #4CAF50;
+  background-color: #e8f5e9;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3);
+  border-width: 10px;
+}
+
+.selection-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.selection-info > div {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-clear {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.btn-clear:hover {
+  background-color: #d32f2f;
+}
+
+.btn-flashcards {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.btn-flashcards:hover:not(:disabled) {
+  background-color: #0b7dda;
+}
+
+.btn-flashcards:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Flashcard Styles */
+.flashcard-mode {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.flashcard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.btn-exit {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.btn-exit:hover {
+  background-color: #d32f2f;
+}
+
+.flashcard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.flashcard {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.flashcard-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flashcard:hover {
+  transform: translateY(-5px);
+}
+
+.flashcard {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: all 0.3s ease;
+}
+
+.flashcard-char {
+  font-size: 120px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.flashcard-romaji {
+  font-size: 32px;
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.flashcard-hint {
+  font-size: 16px;
+  color: #888;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+.flashcard-controls {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-nav {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+.btn-nav:hover {
+  background-color: #0b7dda;
+}
+
+.card-counter {
+  font-size: 18px;
+  font-weight: bold;
+  min-width: 80px;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .selection-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .flashcard {
+    width: 250px;
+    height: 350px;
+  }
+  
+  .flashcard-char {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .flashcard {
+    width: 200px;
+    height: 300px;
+  }
+  
+  .flashcard-char {
+    font-size: 80px;
+  }
+  
+  .flashcard-romaji {
+    font-size: 24px;
+  }
+}
